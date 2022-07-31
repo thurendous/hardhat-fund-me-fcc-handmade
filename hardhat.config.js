@@ -30,11 +30,12 @@ module.exports = {
   networks: {
     rinkeby: {
       url: RINKEBY_URL,
-      // accounts: [PRIVATE_KEE],
+      accounts: [PRIVATE_KEE],
       chainId: 4,
       blockConfirmations: 6,
-      // gasPrice: 2500000000,
-      accounts: [PRIVATE_KEE],
+      gasPrice: "auto",
+      gasLimit: "1763700000000000",
+      // accounts: [PRIVATE_KEE],
       blockConfirmations: 6
     },
     localhost: {
@@ -46,7 +47,7 @@ module.exports = {
     apiKey: ETHERSCAN,
   },
   gasReporter: {
-    enabled: false,
+    enabled: true,
     outputFile: "gas-report.txt",
     noColors: true,
     currency: "USD",
